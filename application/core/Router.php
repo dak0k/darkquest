@@ -31,11 +31,9 @@ class Router
         
         $url = trim($_SERVER['REQUEST_URI'], '/');
         foreach ($this->routes as $route => $params) {
-            if(preg_match($route, $url, $matches))
-            {
+            if (preg_match($route, $url, $matches)) {
                 $this->params = $params;
                 return true;
-                // debug($matches);
             }
         }
         return false;
@@ -45,14 +43,24 @@ class Router
     {
        if( $this->match())
        {
-        $controller = 'application\controllers\\'.ucfirst($this->params['controller']).'Controller.php';
-        if(class_exists($controller))
-        {
-
-        }else{
-            echo "Class Not Found ".$controller;
-        }
-       
+            $path= 'application\controllers\\'.ucfirst($this->params['controller']).'Controller';
+            if(class_exists($path))
+            {
+                //Checking function
+                $action = $this->params['action'].'Action';
+                if(method_exists($path, $action))
+                {
+                    $controller = new $path($this->params);
+                    $controller->$action();
+                }
+                else{
+                    echo "Method Not Found ".$action;
+                }
+            }
+            else{
+                echo "Controller Not Found ".$path;
+            }
+        
        }
        else{
         echo "Route Not Found";
