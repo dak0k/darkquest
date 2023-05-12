@@ -2,27 +2,17 @@
     "name": "dak00/darkquest",
     "description": "A powerful and easy PHP framework for building web applications",
     "type": "library",
-    "keywords": [
-        "php",
-        "framework",
-        "mvc"
-    ],
     "license": "MIT",
-    "authors": [
-        {
-            "name": "dak0k",
-            "email": "adaibekovdarkhan@gmail.com"
+    "autoload": {
+        "psr-4": {
+            "Dak00\\Darkquest\\": "src/"
         }
-    ],
+    },
+    "minimum-stability": "dev",
     "require": {
         "php": ">=7.4",
         "psr/http-message": "^1.0",
-        "league/route": "^3.0"
-    },
-    "minimum-stability": "dev",
-    "autoload": {
-        "psr-4": {
-            "DarkQuest\\": "src/"
-        }
+        "league/route": "6.x-dev"
+        
     }
 }
