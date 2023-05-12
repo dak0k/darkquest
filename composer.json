@@ -20,6 +20,6 @@
             "php": ">=7.4",
     "league/route": "6.x-dev",
     "psr/http-message": "^1.0",
-    "dak00/darkquest": "dev-main"
+    "dak00/darkquest": "main"
     }
 }
