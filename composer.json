@@ -1,0 +1,19 @@
+{
+    "name": "dak00/darkquest",
+    "description": "A powerful and easy PHP framework for building web application",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Dak00\\Darkquest\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Adaibekov Darkhan",
+            "email": "adaibekovdarkhan5@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
