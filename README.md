@@ -1,10 +1,10 @@
 # Darkquest
 Easy Framework for begginers in php
 
-##Installation 
+## Installation 
 
-###You can follow this command
+### You can follow this command
 
----
+```
 composer require dak00/darkquest
----
+```
