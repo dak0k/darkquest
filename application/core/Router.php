@@ -2,7 +2,7 @@
 
 namespace application\core;
 
-
+use application\core\View;
 class Router 
 {
 
@@ -54,16 +54,16 @@ class Router
                     $controller->$action();
                 }
                 else{
-                    echo "Method Not Found ".$action;
+                    View::errorCode(404);
                 }
             }
             else{
-                echo "Controller Not Found ".$path;
+                View::errorCode(403);
             }
         
        }
        else{
-        echo "Route Not Found";
+        View::errorCode(500);
        }
         // echo 'start';
     }
