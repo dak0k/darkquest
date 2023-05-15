@@ -6,5 +6,5 @@ Easy Framework for begginers in php
 ### You can follow this command
 
 ```
-composer require dak00/darkquest
+composer create-project --stability dev dak00/darkquest my-project
 ```
