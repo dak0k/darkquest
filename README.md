@@ -7,5 +7,4 @@ Easy Framework for begginers in php
 
 ```
 composer create-project --stability dev dak00/darkquest my-project
-
 ```
