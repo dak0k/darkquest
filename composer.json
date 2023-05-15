@@ -1,6 +1,6 @@
 {
     "name": "dak00/darkquest",
-    "description": "A powerful and easy PHP framework for building web application",
+    "description": "A powerful and easy PHP framework for building web applications",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -14,13 +14,11 @@
             "email": "adaibekovdarkhan5@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "require": {
- 
-            "php": ">=7.4",
-    "league/route": "6.x-dev",
-    "psr/http-message": "^1.0",
-    "dak00/darkquest": "^1.02"
-    }
+        "php": ">=7.4",
+        "league/route": "^6.0",
+        "psr/http-message": "^1.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
