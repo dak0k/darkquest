@@ -10,7 +10,7 @@ class Router
     protected $params = [];
 
 
-    public function __construct()
+    public function __construct() 
     {
        $arr = require 'application/config/routes.php';
        foreach($arr as $key => $val)
@@ -20,13 +20,13 @@ class Router
     //    debug($arr);
     }  
     
-    public function add($route, $params)
+    public function add($route, $params)  : void
     {
         $route = '#^'.$route.'$#';
         $this->routes[$route] = $params;
     }
 
-    public function match()
+    public function match() : bool
     {
         
         $url = trim($_SERVER['REQUEST_URI'], '/');
@@ -39,7 +39,7 @@ class Router
         return false;
     }
 
-    public function run()
+    public function run() : void
     {
        if( $this->match())
        {
@@ -47,7 +47,7 @@ class Router
             if(class_exists($path))
             {
                 //Checking function
-                $action = $this->params['action'].'Action';
+                $action = $this->params['action'];
                 if(method_exists($path, $action))
                 {
                     $controller = new $path($this->params);

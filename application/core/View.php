@@ -15,7 +15,7 @@ class View
         // debug($this->path);
     }
 
-    public function render($title, $vars = [])
+    public function render($title, $vars = [])  : void
     {
        
         extract($vars);
@@ -45,6 +45,16 @@ class View
             require $path;
         }
         
+        exit;
+    }
+
+    public function message($status, $message)
+    {
+        exit(json_encode(['success' =>$status, 'message' => $message]));
+    }
+    public function location($url)
+    {
+        header('location: '.$url);
         exit;
     }
 

@@ -3,6 +3,7 @@
 namespace application\controllers;
 
 use application\core\Controller;
+use application\core\View;
 
 class AccountController extends Controller
 {
@@ -12,12 +13,16 @@ class AccountController extends Controller
         $this->view->layout='custom';
       }
     */
-    public function loginAction()
+    public function login() 
     {
        // $this->view->redirect(''); //For redirecting
-        $this->view->render('Login Page');
+      //  if(!empty($_POST)){
+      //   // $this->view->message('error', ' wrong');
+      //   $this->view->location('/');
+      //  }
+       $this->view->render('Login Page');
     }
-    public function registerAction()
+    public function register()
     {
         // $this->view->path = 'test/test'; #it needs if page locate in other directory
         // $this->view->layout='custom'; #$this->view->layout needs if you want use own custom layout

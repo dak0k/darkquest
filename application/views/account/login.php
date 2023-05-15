@@ -1,10 +1,10 @@
 <p>Login Page</p>
-<form action="" method="post">
+<form action="/account/login" method="post">
     <p>Login</p>
-    <input type="text">
+    <input type="text" name="login">
     <br>
     <p>Password</p>
-    <input type="text" name="" id="">
+    <input type="text" name="password" id="">
     <br>
-    <button type="submit">Log In</button>
+    <button type="submit" name="enter">Log In</button>
 </form>

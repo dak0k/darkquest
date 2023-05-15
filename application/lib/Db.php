@@ -22,7 +22,7 @@ class Db
     //    $query = $this->db->query($sql);
        return $stmt;
     }
-    public function row($sql, $params = [])
+    public function row($sql, $params = []) 
     {
         $result=$this->query($sql, $params);
         return $result->fetchAll(PDO::FETCH_ASSOC);
