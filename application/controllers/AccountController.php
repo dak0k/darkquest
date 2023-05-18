@@ -9,7 +9,7 @@ class AccountController extends Controller
 {
    /*
       public function before()
-       {
+      {
         $this->view->layout='custom';
       }
     */

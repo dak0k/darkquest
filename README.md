@@ -8,3 +8,9 @@ Easy Framework for begginers in php
 ```
 composer create-project --stability dev dak00/darkquest my-project
 ```
+
+After installing  do not forget to write this command for installing dependencies:
+
+```
+composer install
+```
