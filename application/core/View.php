@@ -48,14 +48,14 @@ class View
         exit;
     }
 
-    public function message($status, $message)
-    {
-        exit(json_encode(['success' =>$status, 'message' => $message]));
-    }
-    public function location($url)
-    {
-        header('location: '.$url);
-        exit;
-    }
+    // public function message($status, $message)
+    // {
+    //     exit(json_encode(['success' =>$status, 'message' => $message]));
+    // }
+    // public function location($url)
+    // {
+    //     header('location: '.$url);                                                                                                            
+    //     exit;
+    // }
 
 }

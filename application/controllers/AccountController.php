@@ -15,11 +15,7 @@ class AccountController extends Controller
     */
     public function login() 
     {
-       // $this->view->redirect(''); //For redirecting
-      //  if(!empty($_POST)){
-      //   // $this->view->message('error', ' wrong');
-      //   $this->view->location('/');
-      //  }
+    
        $this->view->render('Login Page');
     }
     public function register()
