@@ -1,4 +1,4 @@
-# Darkquest
+<center># Darkquest</center>
 Easy Framework for begginers in php
 
 ## Installation 
