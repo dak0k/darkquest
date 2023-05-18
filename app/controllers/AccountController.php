@@ -1,9 +1,9 @@
 <?php
 
-namespace application\controllers;
+namespace app\controllers;
 
-use application\core\Controller;
-use application\core\View;
+use app\core\Controller;
+use app\core\View;
 
 class AccountController extends Controller
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace application\controllers;
+namespace app\controllers;
 
-use application\core\Controller;
-use application\lib\Db;
+use app\core\Controller;
+use app\lib\Db;
 class MainController extends Controller
 {
     public function index()

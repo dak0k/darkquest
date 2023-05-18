@@ -1,6 +1,6 @@
 <?php
 
-namespace application\core;
+namespace app\core;
 
 class View
 {
@@ -19,14 +19,14 @@ class View
     {
        
         extract($vars);
-        $path = 'application/views/'.$this->path.'.php';
+        $path = 'app/views/'.$this->path.'.php';
         // debug($vars);
         #it needs if page locate in other directory
         if(file_exists($path)){
             ob_start();
             require $path;
             $content = ob_get_clean();
-            require 'application/views/layouts/'.$this->layout.'.php';
+            require 'app/views/layouts/'.$this->layout.'.php';
         }
         // else{
         //     echo "View Not Found".$this->path;
@@ -40,7 +40,7 @@ class View
     public static function errorCode($code)
     {
         http_response_code($code);
-        $path = 'application/views/errors/'.$code.'.php';
+        $path = 'app/views/errors/'.$code.'.php';
         if (file_exists($path)) {
             require $path;
         }
@@ -48,14 +48,6 @@ class View
         exit;
     }
 
-    // public function message($status, $message)
-    // {
-    //     exit(json_encode(['success' =>$status, 'message' => $message]));
-    // }
-    // public function location($url)
-    // {
-    //     header('location: '.$url);                                                                                                            
-    //     exit;
-    // }
+
 
 }
